@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     def pipelineConfig=[
-                        sonarQubeServer: 'sonarqube',
+                        sonarQubeServer: 'sonarqube-lab',
                     ]
                     def repositoryUrl = scm.userRemoteConfigs[0].getUrl()
                     def GIT_REPO_NAME = scm.userRemoteConfigs[0].getUrl().tokenize('/').last().split("\\.")[0]
